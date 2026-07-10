@@ -1,0 +1,139 @@
+:root {
+
+  --btn-numero: #007BFF;
+  --btn-numero-hover: #0056b3;
+  --btn-mecanica: #28a745;
+  --btn-mecanica-hover: #1e7e34;
+  --btn-operacao: #ffc107;
+  --btn-operacao-hover: #e0a800;
+  --error-color: #dc3545;
+  --info-color: #17a2b8;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --font-family: 'Arial', sans-serif;
+  --font-size: 16px;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--dark-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+main {
+  background-color: var(--light-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  border: 1px solid #000000;
+  max-width: 90%;
+  min-height: 400px;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.display input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  font-size: medium;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: right;
+  font-weight: bold;
+}
+.display input:focus {
+    outline: none;
+    border-color: var(--btn-numero);
+}
+
+.mecanica {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px;
+  font-size: medium;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--light-color);
+  width: 100%;
+  height: 40px;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+button:active {
+    transform: scale(0.97);
+}
+
+.mecanica button {
+  background-color: var(--btn-mecanica);
+}
+
+.mecanica button:hover {
+  background-color: var(--btn-mecanica-hover);
+}
+
+.botoes {
+  display: flex;
+  gap: 10px;
+}
+
+.botoes button {
+  max-width: 100%;
+  min-width: 50px;
+  width: 100%;
+  height: 80px;
+}
+
+.numeros {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.numeros button {
+  background-color: var(--btn-numero);
+}
+.numeros button:hover {
+  background-color: var(--btn-numero-hover);
+}
+
+.operacoes {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 70px;
+  gap: 10px;
+}
+
+.operacoes button {
+  background-color: var(--btn-operacao);
+  color: var(--dark-color);
+}
+
+.operacoes button:hover {
+  background-color: var(--btn-operacao-hover);
+}
